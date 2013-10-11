@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Breakout</title>
+
+    <!-- Estilos -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Breakout</h1>
+
+    <div class="container">
+        <!-- Div que contiene la puntuación y las vidas restantes. -->
+        <div id="scoreboard">
+            <div class="fl">
+                <!-- Puntuación -->
+                Score: <span id="score">00000</span>
+            </div>
+
+            <div class="fr">
+                <!-- Vidas restantes -->
+                Lives: <span id="lives">3</span>
+            </div>
+        </div>
+
+        <!-- Canvas del juego -->
+        <canvas id="canvas" height="500" width="400">
+            Tu navegador no soporta canvas. Actualízalo.
+        </canvas>
+
+        <!-- Elementos del menú -->
+        <div id="menu">
+            <!-- Nombre del juego -->
+            <h2 id="title">Breakout</h2>
+            <!-- Game Over - Mensaje que se muestra al perder todas las vidas. -->
+            <h3 id="gameover">Game Over</h3>
+            <!-- You win! - Mensaje que se muestra al ganar. -->
+            <h3 id="gamewin">You win!</h3>
+            <!-- Try again - Mensaje que se muestra al perder una vida. -->
+            <h4 id="message">Try again</h4>
+            <!-- Play - Botón de empezar partida -->
+            <a href="#play" id="button_play">Play</a>
+            <!-- Next Level - Botón de siguiente nivel -->
+            <a href="#nextlevel" id="button_next_level">Next Level</a>
+            <!-- Resume - Botón de reanudar partida después de pausa o después de perder una vida. -->
+            <a href="#resume" id="button_resume">Resume</a>
+            <!-- Quit - Botón de abandonar partida. -->
+            <a href="#quit" id="button_quit">Quit</a>
+        </div>
+    </div>
+    
+    <!-- http://paulirish.com/2011/requestanimationframe-for-smart-animating/ -->
+    <script src="js/rAF.js"></script>
+    <!-- Funciones útiles para javascript - Javascript Patterns -->
+    <script src="js/utils.js"></script>
+    <!-- Howler.js - Librería para gestionar los sonidos. -->
+    <script src="js/howler.js"></script>
+    <!-- Clase ball -->
+    <script src="js/ball.js"></script>
+    <!-- Clase paddle -->
+    <script src="js/paddle.js"></script>
+    <!-- Clase brick -->
+    <script src="js/brick.js"></script>
+    <!-- Clase Power -->
+    <script src="js/power.js"></script>
+    <!-- Archivo de niveles del juego -->
+    <script src="js/levels.js"></script>
+    <!-- Archivo principal del juego -->
+    <script src="js/game.js"></script>
+</body>
+</html>
